@@ -1,6 +1,6 @@
 ### Applied Machine Learning Projects
 <br>
-Currently delving into the study of Computer Science, with a specialization area of applied machine learning as it relates to data analytics. My current curriculum consists of _Artificial Intelligence_, and _Programming Machine Learning Applications_. 
+Currently delving into the study of Computer Science, with a specialization area of applied machine learning as it relates to data analytics. My current curriculum consists of *Artificial Intelligence*, and *Programming Machine Learning Applications*. 
 
 While the current state of software engineering has been well-entrenched and established for decades with best-practices in place, the field of data science is still in its infancy stages. There is a certain attraction to this new sub-field, with plenty of room to evolve as its best-practices and methodologies are still in early fluid development. There is also an analytical aspect to it, requiring professional intuition and extra mathematical savvy, on-top of the regular CS skillset.
 
