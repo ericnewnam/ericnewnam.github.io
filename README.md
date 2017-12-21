@@ -11,7 +11,7 @@ The MLP classifier is an algorithm that leverages many artificial "neurons" in i
 
    Each iteration of the above settings will be run with different numbers of hidden layers, from 1 to 9: *L1 = 200, L2 = 500, L3 = 500, L4 = 400, L5 = 300, L6 = 200, L7 = 200, L8 = 100, and L9 = 100.*
 <br><br>
-2. [**_Ensemble Learning: The Use of the Random Forest Algorithm to Perform Human Activity Recognition From Wearable Accelerometer Data._**](https://ericnewnam.github.io/sas-king-county-report.html)
+2. [**_Ensemble Learning: The Use of the Random Forest Algorithm to Perform Human Activity Recognition From Wearable Accelerometer Data._**](https://ericnewnam.github.io/sklearn-random-forest.html)
 <br><br>
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. 3-axial linear acceleration and 3-axial angular velocity were captured using its embedded accelerometer and gyroscope.
 
