@@ -5,11 +5,11 @@ Currently delving into the study of Computer Science, with a specialization area
 While the current state of software engineering has been well-entrenched and established for decades with best-practices in place, the field of data science is still in its infancy stages, relatively speaking. There is a certain attraction to this new sub-field, with plenty of room to evolve as its best-practices and methodologies are still in early development. There is also an analytical aspect to it, ironically requiring human professional guidance and mathematical ability to develop, build, guide, and tune the algorithms, and to interpret the numerical results.
 
 -----
-1. [**_Experimentation With Different Structural Changes and Their Resulting Effects on the Performance of a Multilayer Perceptron Classifier._**](https://ericnewnam.github.io/sklearn-MNIST-MLP-various.html)
+1. [**_Altering Hyperparameters and Their Resulting Effects on the Performance of a Multilayer Perceptron Classifier When Automatically Detecting Pulsar Candidates From RFI Noise_**](https://ericnewnam.github.io/sklearn-pulsar-MLP-various.html)
 <br><br>
-The MLP classifier is an algorithm that leverages many artificial "neurons" in its construction, configured in multiple layers. We will execute a series of structured, orderly changes and observe the effects on certain metrics, while gaining an intuitive understanding of the results when invoking certain high-level, or "hyper" parameters. We will plot the changes in resulting accuracy as a function of the parameter settings.
+The MLP classifier is an algorithm that leverages many artificial "neurons" in its construction, configured in multiple layers. We will execute a series of structured, orderly changes and observe the effects on certain metrics, while gaining an intuitive understanding of the results when invoking certain high-level, or "hyper" parameters. 
 
-   Each iteration of the above settings will be run with different numbers of hidden layers, from 1 to 9: *L1 = 200, L2 = 500, L3 = 500, L4 = 400, L5 = 300, L6 = 200, L7 = 200, L8 = 100, and L9 = 100.*
+   HTRU2 is a data set which describes a sample of pulsar candidates collected during the High Time Resolution Universe Survey. The MLP classifier will attempt to discern the legitimate pulsar examples, which are the minority positive class, and the majority negative class being spurious examples such as RFI and noise.
 <br><br>
 2. [**_Ensemble Learning: The Use of the Random Forest Algorithm to Perform Human Activity Recognition From Wearable Accelerometer Data._**](https://ericnewnam.github.io/sklearn-random-forest.html)
 <br><br>
