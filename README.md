@@ -2,7 +2,7 @@
 <br>
 Currently delving into the study of Computer Science, with a specialization area of applied machine learning as it relates to data analytics. The current Winter curriculum consists of *Artificial Intelligence*, and *Programming Machine Learning Applications*. 
 
-While the current state of software engineering has been well-entrenched and established for decades with best-practices in place, the field of data science is still in its infancy stages, relatively speaking. There is a certain attraction to this new sub-field, with plenty of room to evolve as its best-practices and methodologies are still in early development. There is also an analytical aspect to it, ironically requiring human professional guidance and mathematical ability to develop, build, guide, and tune the algorithms, and to interpret the numerical results.
+While the current state of software engineering has been well-entrenched and established for decades with best-practices in place, the field of data science is still in its infancy stages, relatively speaking. There is a certain attraction to this new sub-field, with plenty of room to evolve as its best-practices and methodologies are still in early development. There is also an analytical aspect to it, ironically requiring a human's guidance and mathematical ability to develop, build, guide, and tune the algorithms, and to interpret the numerical results.
 
 -----
 1. [**_Altering Hyperparameters and Their Resulting Effects on the Performance of a Multilayer Perceptron Classifier When Automatically Detecting Pulsar Candidates From RFI Noise_**](https://ericnewnam.github.io/sklearn-pulsar-MLP-various.html)
