@@ -15,7 +15,7 @@ The MLP classifier is an algorithm that leverages many artificial "neurons" in i
 <br><br>
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. 3-axial linear acceleration and 3-axial angular velocity were captured using its embedded accelerometer and gyroscope.
 
-   We will implement a series of random forests and train the models to predict one of the six human activities described by the numerical data. Each training iteration of the random forest will have slightly different hyperparameter tunings.
+   We will implement a series of random forests and train the models to discern one of the six potential human activities being performed, based solely on the accelerometer data. Each training iteration of the random forest will have slightly different hyperparameter tunings.
 <br><br>
 3. [**_Which Features Are King? An Analysis of Different House Characteristics on the Resulting Price in King County USA._**](https://ericnewnam.github.io/sas-king-county-report.html)
 <br><br>
@@ -29,5 +29,5 @@ We are given a csv file of 10,000 observations from a consumer electronics depar
 
    Before we begin, we will need to explore the dataframe and actively seek out missing, invalid, and abnormal values within our observations. 
 
-   We will then explore the data through queries, and also try to discern patterns through Collaborative Filtering and some clustering, and also Principal Component Analysis.
+   We will then explore the data through queries, and also try to discern patterns through Collaborative Filtering, and also Principal Component Analysis.
 <br><br>
