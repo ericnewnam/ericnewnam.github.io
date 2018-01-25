@@ -1,8 +1,8 @@
 ### Applied Machine Learning Projects
 <br>
-Currently I am a graduate student delving into the study of Computer Science with a Data Science concentration area. The current Winter curriculum consists of *Advanced Data Analysis*, and *Programming Machine Learning Applications*. 
+Currently a graduate student - delving into the study of Computer Science with a Data Science concentration area. The current Winter curriculum consists of *Advanced Data Analysis*, and *Programming Machine Learning Applications*. 
 
-While the current state of software engineering has been well-entrenched and established for decades with best-practices in place, the field of data science is still in its adolescent stage. There is a certain attraction to this new sub-field, with plenty of room to evolve as its best-practices and methodologies are still in early development. There is also an analytical aspect to it, ironically requiring human guidance and mathematical ability to develop, build, guide, and tune the algorithms, and to interpret the numerical results.
+While the current state of software engineering has been well-entrenched and established for decades with best-practices in place, the field of data science is still in its adolescent stage. There is a certain attraction to this new sub-field, with plenty of room to evolve as its best-practices and methodologies are still in early development. There is also an analytical aspect to it, ironically requiring *human guidance* and mathematical ability to develop, build, guide, and tune the algorithms, and to interpret the numerical results.
 
 -----
 
