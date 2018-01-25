@@ -118,106 +118,39 @@
 <p><strong>The model equation:</strong></p>
 <pre><code>log(Price) = 10.19393 
            + (0.00017 * Living_Area_Square_Footage) 
-           + (0.31602 * Has a View Rating 4) 
+           + (0.31602 * Has a View Rating 4)   {dummy}
            + (0.0048 * Age of the House) 
            + (0.00008 * Living_Area_Square_Footage_15) 
-           - (0.3734 * Has_2_Bedrooms) 
-           - (0.4570 * Has_3_Bedrooms) 
-           - (0.4855 * Has_4_Bedrooms) 
-           - (0.4457 * Has_5_Bedrooms) 
-           - (0.4824 * Has_6_Bedrooms) 
-           - (0.8871 * Has_7_Bedrooms) 
-           - (0.8448 * Has_8_Bedrooms) 
-           - (0.6430 * Has_9_Bedrooms) 
-           + (0.0901 * Has_3_Bathrooms) 
-           + (0.4546 * Condition_2) 
-           + (0.6919 * Condition_3) 
-           + (0.7339 * Condition_4) 
-           + (0.7976 * Condition_5) 
-           + (0.8782 * Grade_5) 
-           + (1.2932 * Grade_6) 
-           + (1.5648 * Grade_7) 
-           + (1.7914 * Grade_8) 
-           + (2.0014 * Grade_9) 
-           + (2.1283 * Grade_10) 
-           + (2.1884 * Grade_11) 
-           + (2.6372 * Grade_12) 
-           + (2.2623 * Grade_13) 
-           + (0.1153 * Has_a_Basement) 
-           + (0.0822 * Has_Been_Renovated) 
-           + (0.1352 * Has_1.5_Floors) 
-           + (0.1157 * Has_2_Floors) 
-           + (0.2147 * Has_2.5_Floors) 
-           + (0.3843 * Has_3_Floors)
+           - (0.3734 * Has_2_Bedrooms)         {dummy}
+           - (0.4570 * Has_3_Bedrooms)         {dummy}
+           - (0.4855 * Has_4_Bedrooms)         {dummy}
+           - (0.4457 * Has_5_Bedrooms)         {dummy}
+           - (0.4824 * Has_6_Bedrooms)         {dummy}
+           - (0.8871 * Has_7_Bedrooms)         {dummy}
+           - (0.8448 * Has_8_Bedrooms)         {dummy}
+           - (0.6430 * Has_9_Bedrooms)         {dummy}
+           + (0.0901 * Has_3_Bathrooms)        {dummy}
+           + (0.4546 * Condition_2)            {dummy}
+           + (0.6919 * Condition_3)            {dummy}
+           + (0.7339 * Condition_4)            {dummy}
+           + (0.7976 * Condition_5)            {dummy}
+           + (0.8782 * Grade_5)                {dummy}
+           + (1.2932 * Grade_6)                {dummy}
+           + (1.5648 * Grade_7)                {dummy}
+           + (1.7914 * Grade_8)                {dummy}
+           + (2.0014 * Grade_9)                {dummy}
+           + (2.1283 * Grade_10)               {dummy}
+           + (2.1884 * Grade_11)               {dummy}
+           + (2.6372 * Grade_12)               {dummy}
+           + (2.2623 * Grade_13)               {dummy}
+           + (0.1153 * Has_a_Basement)         {dummy}
+           + (0.0822 * Has_Been_Renovated)     {dummy}
+           + (0.1352 * Has_1.5_Floors)         {dummy}
+           + (0.1157 * Has_2_Floors)           {dummy}
+           + (0.2147 * Has_2.5_Floors)         {dummy}
+           + (0.3843 * Has_3_Floors)           {dummy}
 </code></pre>
-<p>Dummy variables are defined as:</p>
-<pre><code>Where: 
-  Has a View Rating 4 = 1 (if the view is rated as 4)
-  Has a View Rating 4 = 0 (if the view is rated as 0 to 3)
 
-  Has 2 Bedrooms = 1 (if the house has 2 bedrooms)
-  Has 3 Bedrooms = 1 (if the house has 3 bedrooms)
-  Has 4 Bedrooms = 1 (if the house has 4 bedrooms)
-  Has 5 Bedrooms = 1 (if the house has 5 bedrooms)
-  Has 6 Bedrooms = 1 (if the house has 6 bedrooms)
-  Has 7 Bedrooms = 1 (if the house has 7 bedrooms)
-  Has 8 Bedrooms = 1 (if the house has 8 bedrooms)
-  Has 9 Bedrooms = 1 (if the house has 9 bedrooms)
-  Has 2 Bedrooms = 
-    Has 3 Bedrooms = 
-    Has 4 Bedrooms = 
-    Has 5 Bedrooms = 
-    Has 6 Bedrooms = 
-    Has 7 Bedrooms = 
-    Has 8 Bedrooms =
-    Has 9 Bedrooms = 0 (if the house has 1 bedroom)
-
-  Has 3 Bathrooms = 1 (if the house has 3 bathrooms)
-  Has 3 Bathrooms = 0 (if the house has 1 to 5 bathrooms)
-
-  Condition 2 = 1 (if the condition is rated as 2)
-  Condition 3 = 1 (if the condition is rated as 3)
-  Condition 4 = 1 (if the condition is rated as 4)
-  Condition 5 = 1 (if the condition is rated as 5)
-  Condition 2 = 
-    Condition 3 = 
-    Condition 4 = 
-    Condition 5 = 0 (if the condition is rated as 1)
-
-  Grade 5 = 1 (if the grade of the house is rated as 5)
-  Grade 6 = 1 (if the grade of the house is rated as 6)
-  Grade 7 = 1 (if the grade of the house is rated as 7)
-  Grade 8 = 1 (if the grade of the house is rated as 8)
-  Grade 9 = 1 (if the grade of the house is rated as 9)
-  Grade 10 = 1 (if the grade of the house is rated as 10)
-  Grade 11 = 1 (if the grade of the house is rated as 11)
-  Grade 12 = 1 (if the grade of the house is rated as 12)
-  Grade 13 = 1 (if the grade of the house is rated as 13)
-  Grade 5 = 
-    Grade 6 = 
-    Grade 7 = 
-    Grade 8 = 
-    Grade 9 = 
-    Grade 10 = 
-    Grade 11 = 
-    Grade 12 = 
-    Grade 13 = 0 (if the grade of the house is 4)
-
-  Has a Basement = 1 (if the house has a basement)
-  Has a Basement = 0 (if the house doesn’t have a basement)
-
-  Has Been Renovated = 1 (if the house has been renovated)
-  Has Been Renovated = 0 (if the house hasn’t been renovated)
-
-  Has 1.5 Floors = 1 (if the house has 1 ½ floors)
-  Has 2 Floors =   1 (if the house has 2 floors)
-  Has 2.5 Floors = 1 (if the house has 2 ½ floors)
-  Has 3 Floors =   1 (if the house has 3 floors)
-  Has 1.5 Floors = 
-    Has 2 Floors = 
-    Has 2.5 Floors = 
-    Has 3 Floors =   0 (if the house has 1 floor)
-</code></pre>
 <p>The model equation contains a relatively large number of dummy variables, as the features of this particular dataset contained several qualitative ordinal value types. This may be a potential area for model improvement, as the model expression seems to be excessively long, and may not express the clarity of the relationships between the predictors that we would prefer.</p>
 <p>When running the model equation however, most of these dummy variables have a value of zero, drastically reducing our total number of predictors when the model equation is evaluated.</p>
 <p>Examining the relationships between the independent variables of our model equation and the resulting house Price, we can determine the strongest affecting predictors. Listing them from strongest effect to weakest on Price, they are: <strong>Grade 8, Grade 7, Grade 9, Grade 10, Grade 6, Condition 3, Condition 4, Grade 11, Having 4 Bedrooms, 3 Bedrooms, Grade 12, Condition 5, Living Area Square Footage, Age of the House, 2 Bedrooms, 5 Bedrooms, Grade 5, Grade 13, 3 Floors, Living Area of the Nearest 15 Neighbors, Having a Basement, 2 Floors, 6 Bedrooms, Condition 2, Having a Top Rated View of 4, 1 ½ Floors, 8 Bedrooms, 3 Bathrooms, 7 Bedrooms, 9 Bedrooms, 2 ½ Floors, and Having Been Renovated</strong>.</p>
