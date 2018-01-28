@@ -13,7 +13,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
    We will implement a series of random forests and train the models to discern one of the six potential human activities being performed, based solely on the accelerometer data. Each training iteration of the random forest will have slightly different hyperparameter tunings.
 <br><br>
 
-2. [**_Altering Hyperparameters and Their Resulting Effects on the Performance of a Multilayer Perceptron Classifier When Automatically Detecting Pulsar Candidates From RFI Noise_**](https://ericnewnam.github.io/sklearn-pulsar-MLP-simplified.html)
+2. [**_Altering Hyperparameters and Their Resulting Effects on the Performance of a Multilayer Perceptron Classifier When Automatically Detecting Pulsar Candidates From Sky Survey Data._**](https://ericnewnam.github.io/sklearn-pulsar-MLP-simplified.html)
 <br><br>
 The MLP classifier is an algorithm that leverages many artificial "neurons" in its construction, configured in multiple layers. We will execute a series of structured, orderly changes and observe the effects on certain metrics, while gaining an intuitive understanding of the results when invoking certain high-level, or "hyper" parameters. 
 
