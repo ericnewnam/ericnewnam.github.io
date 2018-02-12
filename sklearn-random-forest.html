@@ -11786,7 +11786,7 @@ div#notebook {
 <li>STANDING </li>
 <li>LAYING</li>
 </ul>
-<h3 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h3><p>An initial dimensionality reduction was performed, capturing the majority of the variance of the 561 features with 3 principal components, in order to visualize the datapoints in a 3-dimensional plot. The datapoints were found to clearly express 2 major clusters of data, with each cluster containing the 3 subgroups within those clusters of data.</p>
+<h3 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h3><p>We began with a dimensionality reduction in order to visualize the 561-dimensional data space, reduced down to 3 principal components containing the majority of the original variance, plotted onto a 3-dimensional set of axes. The datapoints were found to clearly express 2 major clusters of data, with each cluster containing the 3 subgroups within those clusters of data.</p>
 <p>A series of random forest classifiers were fitted and analyzed for their respective predictive power. The criteria of Gini and Entropy were tried, as well as the max features to consider when looking for the best split at each node, the minimum impurity decrease to split nodes, and we finally adjusted the minimum samples per leaf / split. A random forest of 59 sub-trees was selected as the best performing model of the set.</p>
 <p>There was a discernable difficulty in classifying the difference between walking downstairs, walking upstairs, and general walking. The observed activities of walking downstairs and especially walking upstairs were being misclassified as walking, and walking downstairs was also misclassified as walking upstairs. Even so, the rest of the human activities were able to be relatively easily classified with a high measure of accuracy. The classification report shows relatively good performance, with an average recall of 0.94, and an average f1-score of 0.94.</p>
 
@@ -12924,7 +12924,7 @@ False
 <li>We will perform a dimensionality reduction before visualizing the data points in 3D, reducing our dimensions from 561 features down to 3 components.</li>
 <li>Can we discern visually, an intuitive sense of all 6 classes of the data, in a spatial way?</li>
 <li>Is there a visible formal differentiation between these 6 groups of datapoints that is obvious?</li>
-<li>We will capture the maximum variance explained within 3 principal components and plot them.</li>
+<li>We will capture the maximum variance explained within 3 principal components and plot them along 3 axes:</li>
 </ul>
 
 </div>
@@ -14452,8 +14452,8 @@ c1BS/JOxAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Here, the datapoints seem to take on a set of forms that correspond to the 6 classes of human activity.</li>
-<li>The left and right seem to contain two large classes of activity, with 3 subsets contained within each of these sides. </li>
-<li>These 2 major groups may be: LAYING, STANDING, and SITTING - and the other group: WALKING, WALKING UPSTAIRS, and WALKING DOWNSTAIRS. Indicating the 2 different numerical characteristics between these types of activities.</li>
+<li>The left and right seem to contain two large classes of activity, with 3 subsets contained within each of these sets. </li>
+<li>These 2 major groups may be: LAYING, STANDING, and SITTING - and the other group: WALKING, WALKING UPSTAIRS, and WALKING DOWNSTAIRS. Indicating the 2 different characteristics between these types of activities, captured by the accelerometer data.</li>
 <li>Rotating the axes, providing another view of the plotted datapoints:</li>
 </ul>
 
@@ -17600,7 +17600,7 @@ RU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>After reducing the original 561 features down to a set of 3 components that capture the majority of the original variance of the original datapoints, we can see that there is a definite, discernable difference not only between the 2 major groups of activity, (movement and non-movement), but also we can see the differentiation between the separate subgroups within these categories. We have <strong>2 major clusters</strong> of datapoints: <strong>LAYING, STANDING,</strong> and <strong>SITTING</strong> comprising one cluster - and the other cluster being: <strong>WALKING, WALKING UPSTAIRS,</strong> and <strong>WALKING DOWNSTAIRS.</strong></p>
+<p>After reducing the original 561 features down to a set of 3 components that capture the majority of the original variance, we can see that there is a definite, discernable difference not only between the 2 major groups of activities (movement and non-movement), but also we can see the differentiation between the separate subgroups within these categories. We have <strong>2 major clusters</strong> of datapoints: <strong>LAYING, STANDING,</strong> and <strong>SITTING</strong> comprising one cluster - and the other cluster being: <strong>WALKING, WALKING UPSTAIRS,</strong> and <strong>WALKING DOWNSTAIRS.</strong></p>
 <p>We can clearly see the 2 major clusters expressing themselves in the first two scatterplots, and after rotating the view of the datapoints in the 3rd scatterplot above, the subgroups become much more visible.</p>
 <p>Initial fitting of a random forest classifier:</p>
 
