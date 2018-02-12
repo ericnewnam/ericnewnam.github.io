@@ -11784,45 +11784,108 @@ div#notebook {
 <li>Categorical Variables: 2</li>
 <li>Number of Samples: 74,001</li>
 </ul>
-<p><strong>This dataset contains the following features:</strong></p>
-
+<h3 id="Feature-Information:">Feature Information:<a class="anchor-link" href="#Feature-Information:">&#182;</a></h3>
 <pre><code>['CensusId',          Census tract ID
- 'State',             State, DC, or Puerto Rico (52 uniques categories)
+ 'State',             State, DC, or Puerto Rico (52 unique categories)
  'County',            County or county equivalent
+
  'TotalPop',          Total population
  'Men',               Number of men
  'Women',             Number of women
+
  'Hispanic',          % of population that is Hispanic/Latino
  'White',             % of population that is white
  'Black',             % of population that is black
  'Native',            % of population that is Native American or Native Alaskan
  'Asian',             % of population that is Asian
  'Pacific',           % of population that is Native Hawaiian or Pacific Islander
+
  'Citizen',           Number of citizens
  'Income',            Median household income
  'IncomeErr',         Median household income error 
  'IncomePerCap',      Income per capita
  'IncomePerCapErr',   Income per capita error
+
  'Poverty',           % under poverty level
  'ChildPoverty',      % of children under poverty level
+
  'Professional',      % employed in management, business, science, and arts
  'Service',           % employed in service jobs
  'Office',            % employed in sales and office jobs
  'Construction',      % employed in natural resources, construction, and maintenance
  'Production',        % employed in production, transportation, and material movement
+
  'Drive',             % commuting alone in a car, van, or truck
  'Carpool',           % carpooling in a car, van, or truck
  'Transit',           % commuting on public transportation
  'Walk',              % walking to work
  'OtherTransp',       % commuting via other means
  'WorkAtHome',        % working at home
+
  'MeanCommute',       Mean commute time (minutes)
+
  'Employed',          % employed (16+)
  'PrivateWork',       % employed in private industry
  'PublicWork',        % employed in public jobs
  'SelfEmployed',      % self-employed
  'FamilyWork',        % in unpaid family work
+
  'Unemployment']      Unemployment rate (%)</code></pre>
+<h3 id="Initial-Analysis-and-Summary">Initial Analysis and Summary<a class="anchor-link" href="#Initial-Analysis-and-Summary">&#182;</a></h3><ul>
+<li><p><em>Is there an obvious parameter of interest, or are there several?</em></p>
+<p>After examining exploratory plots and relationships between variables, there are potential underlying factors or variables that drive the levels of <strong>Unemployment</strong> and <strong>Child Poverty</strong> rate, or <strong>Income</strong>. There may also be an opportunity to examine the economic differences between <strong>Men</strong> and <strong>Women</strong>, and their respective employment positions, i.e. <strong>Professional, Office, Service, Construction, Production, and PublicWork or PrivateWork</strong>. Also, there may be a relationship between the different racial groups (6 categories) and these respective professional groups.</p>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><em>What interesting metric variables does the data have?</em></p>
+<p>There are potential insights from looking at the number of <strong>Men</strong> and the number of <strong>Women</strong> per county, and also the percentage of each of the 6 racial groups per county within the dataset, <strong>Hispanic, White, Black, Native, Asian,</strong> and <strong>Pacific</strong>. The median household <strong>Income</strong>, and the percentage under the <strong>Poverty</strong> level, and under the <strong>Child Poverty</strong> level. The <strong>Unemployment</strong> rate is possibly driven by a group of these, or some of these metric variables.</p>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><em>What interesting categorical variables does the data have?</em></p>
+<p>The <strong>State</strong> and <strong>County</strong> are possibly correlated to some of the insights we may gain by examining the Income and Unemployment rates of different professional or ethnic groups. We also have an opportunity to create some new categorical features such as <strong>Poor, Middle, and Upper Class</strong> as a function of the observation's levels of Income.</p>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><em>Are some of the variables ordinal (ordered but not metric like we discussed in class?)?</em></p>
+<p>The dataset does not have any ordinal variables, however we will probably create a few new ordinal features as the analysis moves forward.</p>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><em>What missing values are there and are there any patterns that you might exploit for filling them in?</em></p>
+<p>Observation 2673 had 2 NULL values the <strong>Income</strong> and <strong>IncomeErr</strong>, and observation 548 had a NULL field, the <strong>Child Poverty</strong> rate. Because each county has unique and sometimes drastically different values for these, we may elect to drop the 2 observations. Using the median to impute may be another option.</p>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><em>What variables look like they might interact?</em></p>
+<p>After examining a few scatterplots, we see a few correlations that stand out, such as a relationship between the different racial groups vs the <strong>Unemployment</strong> rate, and also vs the <strong>ChildPoverty</strong> rate. There may also be a correlation between certain <strong>States</strong> and the different professional categories: <strong>Professional, Office, Service, Construction, Production, and PublicWork or PrivateWork</strong>. Overall, we appear to have 8, maybe 9 major groups of independent variables.</p>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><em>For the metric variables, what units are used and are different variables measured in related but different units? (e.g.  cm and mm or feet and miles)?</em></p>
+<p>For the ethnic groups, the variables are given as percentages of the population. The rates of Unemployment, Child Poverty, the different types of professional employment categories, types of work transportation, Employed, PrivateWork, PublicWork, and the Unemployment rate are all percentages. Most other variables are the actual numbers. The only standout is the MeanCommute time, which is given in minutes. The detailed unit breakdown is listed above in the chart.</p>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><em>For some of the categorical variables, what dependencies are there between any metric variables (parameters of interest?)</em></p>
+<p>Our categorical variables, the <strong>State</strong> and <strong>County</strong>, are possibly correlated to the Income and Unemployment rates of different professional or ethnic groups.  There will probably be some categorical variables created during the analysis, as a new feature of the dataframe. We may create ranges for the MeanCommute time, as a set of distinct ordinal categories.</p>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><em>Explore with boxplots, or if you need to investigate categorical/categorical interactions, look at correspondence analysis.</em>  </li>
+</ul>
+<p><br></p>
+<ul>
+<li><em>What obvious directions for investigation present themselves?</em></li>
+</ul>
 
 </div>
 </div>
@@ -12075,6 +12138,18 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The dataset contains 3,220 observations and 37 features.</p>
+<h3 id="Numerical-breakdown-of-the-counties-per-State:">Numerical breakdown of the counties per State:<a class="anchor-link" href="#Numerical-breakdown-of-the-counties-per-State:">&#182;</a></h3><ul>
+<li>Top 3 are Texas, Georgia, and Virginia.</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
@@ -12162,104 +12237,27 @@ Name: State, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">census_df</span><span class="p">[</span><span class="n">census_df</span><span class="p">[</span><span class="s1">&#39;Women&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">census_df</span><span class="p">[</span><span class="s1">&#39;Women&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#census_df[census_df[&#39;Women&#39;] == census_df[&#39;Women&#39;].max()]</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[5]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>CensusId</th>
-      <th>State</th>
-      <th>County</th>
-      <th>TotalPop</th>
-      <th>Men</th>
-      <th>Women</th>
-      <th>Hispanic</th>
-      <th>White</th>
-      <th>Black</th>
-      <th>Native</th>
-      <th>...</th>
-      <th>Walk</th>
-      <th>OtherTransp</th>
-      <th>WorkAtHome</th>
-      <th>MeanCommute</th>
-      <th>Employed</th>
-      <th>PrivateWork</th>
-      <th>PublicWork</th>
-      <th>SelfEmployed</th>
-      <th>FamilyWork</th>
-      <th>Unemployment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>204</th>
-      <td>6037</td>
-      <td>California</td>
-      <td>Los Angeles</td>
-      <td>10038388</td>
-      <td>4945351</td>
-      <td>5093037</td>
-      <td>48.2</td>
-      <td>26.9</td>
-      <td>8.0</td>
-      <td>0.2</td>
-      <td>...</td>
-      <td>2.8</td>
-      <td>2.3</td>
-      <td>5.1</td>
-      <td>30.0</td>
-      <td>4635465</td>
-      <td>79.0</td>
-      <td>11.5</td>
-      <td>9.4</td>
-      <td>0.2</td>
-      <td>10.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>1 rows × 37 columns</p>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
-
-</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Plot-the-relationship-between-Unemployment-rate-and-race:">Plot the relationship between Unemployment rate and race:<a class="anchor-link" href="#Plot-the-relationship-between-Unemployment-rate-and-race:">&#182;</a></h3><ul>
+<li>Are there clear correlations that we can investigate further?</li>
+</ul>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -15279,6 +15277,15 @@ DSIiIiIiUpWCBhERERERqer/B7rxqwbiK6VlAAAAAElFTkSuQmCC
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Check for NULL values within the dataset:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
@@ -15348,6 +15355,15 @@ dtype: bool</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Drop the NULL observations:</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -15677,6 +15693,17 @@ dtype: bool</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Plot-the-relationship-between-Child-Poverty-rate-and-race:">Plot the relationship between Child Poverty rate and race:<a class="anchor-link" href="#Plot-the-relationship-between-Child-Poverty-rate-and-race:">&#182;</a></h3><ul>
+<li>Are there clear correlations that we can investigate further?</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -18998,6 +19025,17 @@ rkJggg==
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sort-the-States-by-Total-Population,-and-examine-the-Child-Poverty-rates:">Sort the States by Total Population, and examine the Child Poverty rates:<a class="anchor-link" href="#Sort-the-States-by-Total-Population,-and-examine-the-Child-Poverty-rates:">&#182;</a></h3><ul>
+<li>We will examine the results of a horizontal bar graph.</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[37]:</div>
@@ -19935,6 +19973,7 @@ WLRoUW4PRUT+QTN5IiIiImZIz+SJiIiImCE1eSIiIiJmSE2eiIiIiBlSkyciIiJihtTkiYiIiJih
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Reduce-the-dimensionality-and-visualize-the-data:">Reduce the dimensionality and visualize the data:<a class="anchor-link" href="#Reduce-the-dimensionality-and-visualize-the-data:">&#182;</a></h3><ul>
 <li>Use PCA to collapse our 37 features down to 3</li>
+<li>Do 6 clusters appear within the plotted variance?</li>
 </ul>
 
 </div>
