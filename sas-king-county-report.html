@@ -73,7 +73,7 @@
 <a id="user-content-which-features-are-king-an-analysis-of-different-house-characteristics-on-the-resulting-price-for-king-county-usa" class="anchor" href="#which-features-are-king-an-analysis-of-different-house-characteristics-on-the-resulting-price-for-king-county-usa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Which Features Are King? An Analysis of Different House Characteristics on the Resulting Price for King County, USA.</h2>
 <p><br><br>
 <em>Eric Newnam</em></p>
-<p><strong>Abstract</strong></p>
+<p><strong>Summary</strong></p>
 <p>King County encompasses Seattle, WA. The goal of the study was to find clear correlations between certain features of the King County house sales dataset<sup>(2)</sup>, and the resulting house price values. Would it be possible to fit a predictive model using regression analysis to predict, with a minimum of error, the dollar value? Were the features of <strong><em>lot area, being on the waterfront</em></strong>, and <strong><em>having a large number of rooms</em></strong> the main features driving a higher house selling price? This was a hypothesis going into the study. The study began by re-encoding certain features and performing random sampling to get 1000 observations from the total dataset. The Price feature was also log-transformed after analyzing its distribution. The model was fitted and iteratively improved. It was found that the lot area was not significant to the model, and having a large number of bedrooms was not a strong affecter on price. It turned out that having a <strong><em>high-grade rating</em></strong>, <strong><em>high condition rating</em></strong>, and <strong><em>living area</em></strong> were the strongest predictors. The model was validated with an 80/20 train to test split, examining the resulting performance and error. The model was also validated with a 5-fold cross validation, showing good performance with out-of-sample data.</p>
 <p><br><br>
 <strong>Introduction</strong></p>
@@ -85,8 +85,6 @@
 <strong>Methodology</strong></p>
 <p>The dataset contains house sale prices for King County, which includes Seattle. The home sales span the dates from May 2014 through May 2015. The methodology was:</p>
 <ul>
-<li>Get the dataset from <a href="https://www.kaggle.com/harlfoxem/housesalesprediction" rel="nofollow">Kaggle.</a>
-</li>
 <li>Examine the data, features, and datatypes. Come up with a hypothesis.</li>
 <li>Use random sampling to create a smaller subset of 1000 observations.</li>
 <li>Pre-process the data: create dummy variables for categorical features and transform data as required.</li>
