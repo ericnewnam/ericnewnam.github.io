@@ -20,7 +20,14 @@ The MLP classifier is an algorithm that leverages many artificial "neurons" in i
    HTRU2 is a data set which describes a sample of pulsar candidates collected during the High Time Resolution Universe Survey. The MLP classifier will attempt to discern the legitimate pulsar examples, which are the minority positive class, while the majority negative class are spurious examples such as radio-frequency interference (RFI) and noise.
 <br><br>
 
-3. [**_Ensemble Learning: The Use of the Random Forest Algorithm to Perform Human Activity Recognition From Wearable Accelerometer Data._**](https://ericnewnam.github.io/sklearn-random-forest2.html)
+3. [**_Factor Analysis: Finding Underlying Factors Within the General Economic Characteristics of American Communities that Affect the Poverty Rate._**](https://ericnewnam.github.io/factor-analysis-census.html)
+<br><br>
+The data here represents general economic characteristics of all American census tracts and were collected by the US Census Bureau - each observation represents a numbered unique census tract. They are taken from the DP03 and DP05 tables of the 2015 American Community Survey 5-year estimates. 
+
+   Factor analysis was performed in order to determine what factors may be intertwined within the dataset, and may possibly be driving the rate of impoverished workers and impoverished children. This factor analysis will omit the 6 racial groups, and try to determine underlying factors that exist _outside of race/ethnicity_. 
+<br><br>
+
+4. [**_Ensemble Learning: The Use of the Random Forest Algorithm to Perform Human Activity Recognition From Wearable Accelerometer Data._**](https://ericnewnam.github.io/sklearn-random-forest2.html)
 <br><br>
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. 3-axial linear acceleration and 3-axial angular velocity were captured using its embedded accelerometer and gyroscope.
 
