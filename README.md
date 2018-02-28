@@ -13,7 +13,7 @@ King County encompasses Seattle, WA. The goal of the study was to find clear cor
    The study began by re-encoding certain features and performing random sampling to get 1000 observations from the total dataset. The _Price_ feature was also log-transformed after analyzing its distribution. The model was fitted and iteratively improved.
 <br><br>
 
-2. [**_Altering Hyperparameters and Their Resulting Effects on the Performance of a Multilayer Perceptron Classifier When Automatically Detecting Pulsar Candidates From Sky Survey Data._**](https://ericnewnam.github.io/tf-pulsar-MLP-simplified.html)
+2. [**_Altering Hyperparameters and Their Resulting Effects on the Performance of a Multilayer Perceptron Classifier When Detecting Pulsar Candidates From Sky Survey Data._**](https://ericnewnam.github.io/tf-pulsar-MLP-simplified.html)
 <br><br>
 The MLP classifier is an algorithm that leverages many artificial "neurons" in its construction, configured in multiple layers. We will execute a series of structured, orderly changes and observe the effects on certain metrics, while gaining an intuitive understanding of the results when invoking certain high-level, or "hyper" parameters. 
 
@@ -24,7 +24,7 @@ The MLP classifier is an algorithm that leverages many artificial "neurons" in i
 <br><br>
 The data here represents general economic characteristics of all American census tracts and were collected by the US Census Bureau - each observation represents a numbered unique census tract. They are taken from the DP03 and DP05 tables of the 2015 American Community Survey 5-year estimates. 
 
-   Factor analysis was performed in order to determine what factors may be intertwined within the dataset, and may possibly be driving the rate of impoverished workers and impoverished children. This factor analysis will omit the 6 racial groups, and try to determine underlying factors that exist _outside of race/ethnicity_. 
+   Factor analysis was performed in order to determine what factors may be intertwined within the dataset, and may possibly be driving the rate of impoverished workers and impoverished children. This factor analysis will omit the 6 racial categories, and try to determine underlying factors that exist _outside of race/ethnicity_. 
 <br><br>
 
 4. [**_Ensemble Learning: The Use of the Random Forest Algorithm to Perform Human Activity Recognition From Wearable Accelerometer Data._**](https://ericnewnam.github.io/sklearn-random-forest2.html)
