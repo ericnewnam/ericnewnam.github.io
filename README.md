@@ -1,8 +1,5 @@
 ### Applied Machine Learning Projects
 <br>
-Currently a graduate student - delving into the study of Computer Science with a Data Science concentration area. The current Winter curriculum consists of *Advanced Data Analysis*, and *Programming Machine Learning Applications*. 
-
-While the current state of software engineering has been well-entrenched and established for decades with best-practices in place, the field of data science is still in its early stages of growth. There is a certain attraction to this new sub-field, with plenty of room to evolve as its best-practices and methodologies are still in early development. There is also an analytical aspect to it, ironically requiring *human guidance* and mathematical ability to develop, build, guide, and tune the algorithms, and to interpret the numerical results.
 
 -----
 
@@ -32,11 +29,5 @@ The data here represents general economic characteristics of all American census
    Factor analysis was performed in order to determine what factors may be intertwined within the dataset, and may possibly be driving the rate of impoverished workers and impoverished children. This factor analysis will omit the 6 racial categories, and try to determine underlying factors that exist _outside of race/ethnicity_. 
 <br><br>
 
-5. [**_Ensemble Learning: The Use of the Random Forest Algorithm to Perform Human Activity Recognition From Wearable Accelerometer Data._**](https://ericnewnam.github.io/sklearn-random-forest2.html)
-<br><br>
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. 3-axial linear acceleration and 3-axial angular velocity were captured using its embedded accelerometer and gyroscope.
-
-   We will implement a series of random forests and train the models to discern one of the six potential human activities being performed, based solely on the accelerometer data. Each training iteration of the random forest will have slightly different hyperparameter tunings.
-<br><br>
 
 
